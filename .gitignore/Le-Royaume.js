@@ -304,6 +304,7 @@ client.on('message', function (message) {
  
     if (args[0].toLocaleLowerCase() === prefix + 'say') {
         message.member.guild.channels.get(process.env.GENERAL).send(args.slice(1).join(' '))
+        message.delete().catch();
     }
 })
 
