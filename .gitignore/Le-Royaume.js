@@ -309,16 +309,3 @@ client.on('message', function (message) {
         message.delete().catch();
     }
 })
-
-client.on('message', function (message) {
-    if (!message.guild) return
-    let args = message.content.trim().split(/ +/g)
- 
-    if (args[0].toLocaleLowerCase() === prefix + 'send') {
-        let member = args[1]
-        let Mes = args.slice(2).join(' ')
-        member.createDM().then(chan => {
-            chan.send(Mes)
-        })
-    }
-})
