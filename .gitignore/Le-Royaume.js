@@ -308,3 +308,18 @@ client.on('message', function (message) {
         message.delete().catch();
     }
 })
+
+client.on('message', message => { 
+    let args = message.content.trim().split(/ +/g)
+    if (args[0].toLocaleLowerCase() === prefix + 'send') {
+        if (!message.guild) return
+        if (message.author.id != "289530805137571840") return message.channel.send("Tu n'as pas les permission!")
+        let ID = args[1]
+        if (message.guild) 
+        { 
+            message.guild.members.forEach(member => { if (member.id != client.user.id && !member.user.bot && member.id == ID) member.send(message.content.slice((args[0] + args[1] + 1).length)); }); 
+            message.delete().catch();
+        }
+    }
+});
+
