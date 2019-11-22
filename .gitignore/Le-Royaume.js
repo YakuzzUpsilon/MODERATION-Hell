@@ -296,7 +296,7 @@ client.on('message', function (message) {
 })
 
 client.on("guildMemberAdd", member => {
-    member.guild.channels.get("646375095883005987").send(`Salut ${member}, bienvenue dans le ${member.guild.name} :crown: !
+    member.guild.channels.get(process.env.GENERAL).send(`Salut ${member}, bienvenue dans le ${member.guild.name} :crown: !
 
     :zap: N'oublie pas de lire le règlement: ${member.guild.channels.get(process.env.REGLEMENT)}
     Ensuite pour ajouter tes rôles c'est ici: ${member.guild.channels.get(process.env.ROLE)} :zap:
