@@ -33,7 +33,6 @@ client.on('message', function (message) {
        }
     }
 })
- 
 
 /*Ban*/
 client.on('message', function (message) {
