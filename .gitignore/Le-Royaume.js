@@ -193,9 +193,11 @@ client.on('message', function (message) {
             }
         }
         setTimeout(function(){
+         if(member.mute){
             member.removeRole(muterole);
             message.channel.send(`le mute de ${member} a prit fin.`)
             member.guild.channels.get(process.env.LOGMOD).send(`le mute de ${member} a prit fin.`)
+         }
         }, ms(mutetime));
         if(!reason){
             reason = "non spécifié"
@@ -287,9 +289,11 @@ client.on('message', function (message) {
             })
             fs.writeFileSync('./bans.json', JSON.stringify(bans))
         setTimeout(function(){
-            message.guild.unban(member.user.id);
-            message.channel.send('le ban de ' + member + ' a prit fin.')
-            member.guild.channels.get(process.env.LOGMOD).send('le ban de ' +member+ ' a prit fin.')
+            if(member.ban){
+                message.guild.unban(member.user.id);
+                message.channel.send('le ban de ' + member + ' a prit fin.')
+                member.guild.channels.get(process.env.LOGMOD).send('le ban de ' +member+ ' a prit fin.')
+            }
         }, ms(bantime));
      }
 })
