@@ -193,7 +193,7 @@ client.on('message', function (message) {
             }
         }
         setTimeout(function(){
-         if(member.mute){
+         if (member.roles.some(role => role.name === "Muted")){
             member.removeRole(muterole);
             message.channel.send(`le mute de ${member} a prit fin.`)
             member.guild.channels.get(process.env.LOGMOD).send(`le mute de ${member} a prit fin.`)
