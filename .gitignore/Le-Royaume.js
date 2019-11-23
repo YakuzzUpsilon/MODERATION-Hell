@@ -25,11 +25,11 @@ client.on('message', function (message) {
        member.kick()
        if(!reason){
         message.channel.send('**' + member + '** a été exclu.')
-        member.guild.channels.get(process.env.LOGMOD).send(member + ' a été exclu.')
+        //member.guild.channels.get(process.env.LOGMOD).send(member + ' a été exclu.')
        }
        else{
         message.channel.send('**' + `${member}` + '** a été exclu pour' + reason + ".")
-        member.guild.channels.get(process.env.LOGMOD).send(member + ' a été exclu pour ' + reason +".")
+        //member.guild.channels.get(process.env.LOGMOD).send(member + ' a été exclu pour ' + reason +".")
        }
     }
 })
@@ -49,11 +49,11 @@ client.on('message', function (message) {
        message.guild.ban(member, reason)
        if(!reason){
         message.channel.send('**' + member + '** a été ban.')
-        member.guild.channels.get(process.env.LOGMOD).send(member + ' a été ban.')
+        //member.guild.channels.get(process.env.LOGMOD).send(member + ' a été ban.')
        }
        else{
         message.channel.send('**' + member + '** a été ban pour ' + reason + ".")
-        member.guild.channels.get(process.env.LOGMOD).send(member + ' a été ban pour ' + reason + ".")
+        //member.guild.channels.get(process.env.LOGMOD).send(member + ' a été ban pour ' + reason + ".")
        }
     }
 })
@@ -83,10 +83,10 @@ client.on('message', function (message) {
             member.addRole(muterole)
             if(!reason){
                 message.channel.send(member + ' a été mute.')
-                member.guild.channels.get(process.env.LOGMOD).send(`${member} a été mute.`)
+                //member.guild.channels.get(process.env.LOGMOD).send(`${member} a été mute.`)
             }else{
                 message.channel.send(member + ' a été mute pour ' + reason + ".")
-                member.guild.channels.get(process.env.LOGMOD).send(`${member} a été mute pour ` + reason + ".")
+                //member.guild.channels.get(process.env.LOGMOD).send(`${member} a été mute pour ` + reason + ".")
             }
         }
         if(!reason){
@@ -116,10 +116,10 @@ client.on("message", function (message) {
         let reason = args.slice(2).join(' ')
         if(!reason){
             message.channel.send(member + " a été warn.")
-            member.guild.channels.get(process.env.LOGMOD).send(`${member} a été warn.`)
+            //member.guild.channels.get(process.env.LOGMOD).send(`${member} a été warn.`)
         }else{
             message.channel.send(member + " a été warn pour " + reason + ".")
-            member.guild.channels.get(process.env.LOGMOD).send(`${member} a été warn pour ` + reason + ".")
+            //member.guild.channels.get(process.env.LOGMOD).send(`${member} a été warn pour ` + reason + ".")
         }
         if(!reason){
             reason = "non spécifié"
@@ -150,7 +150,7 @@ client.on("message", function (message) {
         let muterole = message.guild.roles.find(role => role.name === 'Muted')
         if(muterole && member.roles.has(muterole.id)) member.removeRole(muterole)
         message.channel.send(`le mute de ${member} a prit fin.`)
-        member.guild.channels.get(process.env.LOGMOD).send(`le mute de ${member} a prit fin.`)
+        //member.guild.channels.get(process.env.LOGMOD).send(`le mute de ${member} a prit fin.`)
     }
  
     //unwarn
@@ -164,7 +164,7 @@ client.on("message", function (message) {
         warns[member.id].shift()
         fs.writeFileSync('./warns.json', JSON.stringify(warns))
         message.channel.send("Le dernier warn de " + member + " a été retiré.")
-        member.guild.channels.get(process.env.LOGMOD).send(`le dernier warn de ${member} a été retiré.`)
+        //member.guild.channels.get(process.env.LOGMOD).send(`le dernier warn de ${member} a été retiré.`)
     }
 })
     
@@ -185,17 +185,17 @@ client.on('message', function (message) {
             member.addRole(muterole)
             if(!reason){
                 message.channel.send(`${member} a été mute ${mutetime}.`)
-                member.guild.channels.get(process.env.LOGMOD).send(`${member} a été mute ${mutetime}.`)
+                //member.guild.channels.get(process.env.LOGMOD).send(`${member} a été mute ${mutetime}.`)
             }else{
                 message.channel.send(`${member} a été mute ${mutetime} pour ${reason}.`)
-                member.guild.channels.get(process.env.LOGMOD).send(`${member} a été mute ${mutetime} pour ` + reason +".")
+                //member.guild.channels.get(process.env.LOGMOD).send(`${member} a été mute ${mutetime} pour ` + reason +".")
             }
         }
         setTimeout(function(){
          if (member.roles.some(role => role.name === "Muted")){
             member.removeRole(muterole);
             message.channel.send(`le mute de ${member} a prit fin.`)
-            member.guild.channels.get(process.env.LOGMOD).send(`le mute de ${member} a prit fin.`)
+            //member.guild.channels.get(process.env.LOGMOD).send(`le mute de ${member} a prit fin.`)
          }
         }, ms(mutetime));
         if(!reason){
@@ -238,7 +238,7 @@ client.on('message', function (message) {
        if (!memberbanned) return message.channel.send("Membre introuvable.")
        message.guild.unban(memberbanned)
      .then(user => message.channel.send(`le ban de ` + '**'+ `${user.username}` + '**' + ` a prit fin.`))
-     .then(user => message.member.guild.channels.get(process.env.LOGMOD).send(`le ban de `  + '**'+ `${user.username}` + '**' + ` a prit fin.`))
+     //.then(user => message.member.guild.channels.get(process.env.LOGMOD).send(`le ban de `  + '**'+ `${user.username}` + '**' + ` a prit fin.`))
     }
     //ban
     if (args[0].toLocaleLowerCase() === prefix + 'idban') {
@@ -249,11 +249,11 @@ client.on('message', function (message) {
         if(!reason){
             message.guild.ban(memberbanned)
             .then(user => message.channel.send('**' + `${user}` + '** a été ban.'))
-            .then(user => message.member.guild.channels.get(process.env.LOGMOD).send('**' + `${user}` + '** a été ban pour ' + reason +"."))
+            //.then(user => message.member.guild.channels.get(process.env.LOGMOD).send('**' + `${user}` + '** a été ban pour ' + reason +"."))
         }else{
             message.guild.ban(memberbanned, reason)
             .then(user => message.channel.send('**' + `${user}` + '** a été ban.'))
-            .then(user => message.member.guild.channels.get(process.env.LOGMOD).send('**' + `${user}` + '** a été ban pour ' + reason +"."))
+            //.then(user => message.member.guild.channels.get(process.env.LOGMOD).send('**' + `${user}` + '** a été ban pour ' + reason +"."))
         }
     }
     //tempban
@@ -268,10 +268,10 @@ client.on('message', function (message) {
         if (!member.bannable) return message.channel.send("Je ne peux pas bannir cet utilisateur.")
         message.guild.ban(member, reason)
         if(!reason){
-            member.guild.channels.get(process.env.LOGMOD).send('**' + member + '**' + 'a été ban' + `${bantime}.`)
+            //member.guild.channels.get(process.env.LOGMOD).send('**' + member + '**' + 'a été ban' + `${bantime}.`)
             message.channel.send('**' + member + '** a été banni pendant ' + `${bantime}` + '.')
         }else{
-            member.guild.channels.get(process.env.LOGMOD).send('**' + member + '**' + 'a été ban' + `${bantime} pour ` + reason + ".")
+            //member.guild.channels.get(process.env.LOGMOD).send('**' + member + '**' + 'a été ban' + `${bantime} pour ` + reason + ".")
             message.channel.send('**' + member + '** a été banni pendant ' + `${bantime}` + ' pour ' + reason + ".")
         }
         if(!reason){
@@ -290,7 +290,7 @@ client.on('message', function (message) {
         setTimeout(function(){
                 message.guild.unban(member.user.id);
                 message.channel.send('le ban de ' + member + ' a prit fin.')
-                member.guild.channels.get(process.env.LOGMOD).send('le ban de ' +member+ ' a prit fin.')
+                //member.guild.channels.get(process.env.LOGMOD).send('le ban de ' +member+ ' a prit fin.')
         }, ms(bantime));
      }
 })
