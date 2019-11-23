@@ -300,7 +300,7 @@ client.on('guildMemberAdd', function (member) {
         .setDescription(`Salut ${member}, bienvenue dans le ${member.guild.name} :smiling_imp: !
 
         :boom: N'oublie pas de lire le règlement: ${member.guild.channels.get(process.env.REGLEMENT)}
-        Ensuite pour ajouter tes rôles c'est ici: ${member.guild.channels.get(process.env.ROLE)} 
+        :boom: Ensuite pour ajouter tes rôles c'est ici: ${member.guild.channels.get(process.env.ROLE)} 
         :boom: N'hésites pas à inviter tes ami(e)s !`)
         .setFooter(`Tu es le ${member.guild.memberCount}ème membre du serveur!`)
     member.guild.channels.get(process.env.GENERAL).send(embed)
