@@ -296,11 +296,11 @@ client.on('message', function (message) {
 })
 client.on('guildMemberAdd', function (message) {
         let embed = new Discord.RichEmbed()
-        .setDescription(`Salut ${member}, bienvenue dans le ${message.guild.name} :crown: !
+        .setDescription(`Salut ${member}, bienvenue dans le ${message.guild.name} :smiling_imp: !
 
-        :zap: N'oublie pas de lire le règlement: ${message.guild.channels.get(process.env.REGLEMENT)}
-        Ensuite pour ajouter tes rôles c'est ici: ${message.guild.channels.get(process.env.ROLE)} :zap:
-        N'hésites pas à inviter tes ami(e)s !`)
+        :boom: N'oublie pas de lire le règlement: ${message.guild.channels.get(process.env.REGLEMENT)}
+        :boom: Ensuite pour ajouter tes rôles c'est ici: ${message.guild.channels.get(process.env.ROLE)}
+        :boom: N'hésites pas à inviter tes ami(e)s !`)
         .setFooter(`Tu es le ${message.guild.memberCount}ème membre du serveur!`)
         message.guild.channels.get(process.env.GENERAL).send(embed)
         }
