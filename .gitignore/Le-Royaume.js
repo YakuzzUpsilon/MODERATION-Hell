@@ -295,7 +295,6 @@ client.on('message', function (message) {
      }
 })
 client.on('guildMemberAdd', function (message) {
-    message.guild.members.forEach(member => { if (message.user.id == member.id){
         let embed = new Discord.RichEmbed()
         .setDescription(`Salut ${member}, bienvenue dans le ${message.guild.name} :crown: !
 
@@ -305,7 +304,6 @@ client.on('guildMemberAdd', function (message) {
         .setFooter(`Tu es le ${message.guild.memberCount}ème membre du serveur!`)
         message.guild.channels.get(process.env.GENERAL).send(embed)
         }
-    })
 })
 
 client.on('message', function (message) {
