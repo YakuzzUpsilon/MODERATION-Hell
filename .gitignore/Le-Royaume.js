@@ -294,16 +294,18 @@ client.on('message', function (message) {
         }, ms(bantime));
      }
 })
+client.on('guildMemberAdd', function (message) {
+    message.guild.members.forEach(member => { if (message.user.id == member.id){
+        let embed = new Discord.RichEmbed()
+        .setDescription(`Salut ${member}, bienvenue dans le ${message.guild.name} :crown: !
 
-client.on('guildMemberAdd', function (member) {
-    let embed = new Discord.RichEmbed()
-        .setDescription(`Salut ${member}, bienvenue dans le ${member.guild.name} :smiling_imp: !
-
-        :boom: N'oublie pas de lire le règlement: ${member.guild.channels.get(process.env.REGLEMENT)}
-        :boom: Ensuite pour ajouter tes rôles c'est ici: ${member.guild.channels.get(process.env.ROLE)} 
-        :boom: N'hésites pas à inviter tes ami(e)s !`)
-        .setFooter(`Tu es le ${member.guild.memberCount}ème membre du serveur!`)
-    member.guild.channels.get(process.env.GENERAL).send(embed)
+        :zap: N'oublie pas de lire le règlement: ${message.guild.channels.get(process.env.REGLEMENT)}
+        Ensuite pour ajouter tes rôles c'est ici: ${message.guild.channels.get(process.env.ROLE)} :zap:
+        N'hésites pas à inviter tes ami(e)s !`)
+        .setFooter(`Tu es le ${message.guild.memberCount}ème membre du serveur!`)
+        message.guild.channels.get(process.env.GENERAL).send(embed)
+        }
+    })
 })
 
 client.on('message', function (message) {
