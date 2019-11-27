@@ -361,5 +361,4 @@ client.on('message', msg => {
                     description: `J'ai activé le rôle de changement de couleur pour ***${Role}***`
                 }
             })
-    }
 });
