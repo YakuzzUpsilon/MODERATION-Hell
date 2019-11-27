@@ -5,7 +5,7 @@ const ms =require('ms')
 const warns = JSON.parse(fs.readFileSync('./warns.json'))
 const mutes = JSON.parse(fs.readFileSync('./mutes.json'))
 const bans = JSON.parse(fs.readFileSync('./bans.json'))
-let prefix =process.env.PREFIXE
+let prefix = process.env.PREFIXE
 
 client.login(process.env.TOKEN)
 
@@ -354,11 +354,12 @@ client.on('message', msg => {
     if(cmd === 'rainbow'){
         if (!Role) return msg.channel.send('Veuillez spécifier un rôle');
         if (!rRole) return msg.channel.send('Impossible de trouver le rôle spécifié');
-            setInterval(() => { SplashyRianbow(); },)
+            setInterval(() => { SplashyRianbow(); })
             msg.channel.send({
                 embed: {
                     color: msg.member.displayColor,
                     description: `J'ai activé le rôle de changement de couleur pour ***${Role}***`
                 }
             })
+    }
 });
