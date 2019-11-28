@@ -9,7 +9,7 @@ let prefix = process.env.PREFIXE
 
 client.login(process.env.TOKEN)
 
-const activities = "Vous envoie des coeurs"
+const activities = process.env.STATUT
 
 client.on('ready', () => {
         client.user.setActivity(activities);
