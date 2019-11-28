@@ -353,7 +353,7 @@ client.on('message', msg => {
     if(cmd === 'rainbow'){
         if (!Role) return msg.channel.send('Veuillez spécifier un rôle');
         if (!rRole) return msg.channel.send('Impossible de trouver le rôle spécifié');
-            setInterval(50() => { SplashyRianbow(); },)
+            setInterval(() => { SplashyRianbow(); },)
             msg.channel.send({
                 embed: {
                     color: msg.member.displayColor,
