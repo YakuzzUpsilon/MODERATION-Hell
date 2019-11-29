@@ -359,7 +359,7 @@ client.on('message', mess => {
         if (!Role) return mess.channel.send('Veuillez spécifier un rôle');
         if (!rRole) return mess.channel.send('Impossible de trouver le rôle spécifié');
         if (!mess.member.hasPermission('ADMINISTRATOR')) return mess.channel.send("Vous n'avez pas la permission d'utiliser cette commande.")
-            setInterval(() => { SplashyRianbow(); },)
+            setInterval(() => { SplashyRianbow(); },500)
             mess.channel.send({
                 embed: {
                     color: mess.member.displayColor,
