@@ -4,7 +4,7 @@ class Kick extends Command {
   constructor(client) {
     super(client, {
       name: "kick",
-      description: "Kick un utilisateur.",
+      description: "+kick membre raison",
       usage: "kick",
       category: "Système",
       permLevel: "🔥"
