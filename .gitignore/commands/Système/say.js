@@ -4,7 +4,7 @@ class Say extends Command {
   constructor(client) {
     super(client, {
       name: "say",
-      description: "Envoie une message dans un sallon.",
+      description: "+say salon message",
       usage: "say",
       category: "Système",
       permLevel: "🔑"
