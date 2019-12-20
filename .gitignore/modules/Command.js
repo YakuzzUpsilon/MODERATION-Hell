@@ -15,7 +15,7 @@ class Command {
   ) {
     this.client = client;
     this.conf = { enabled, guildOnly, aliases, permLevel };
-    this.help = { name, description, category, usage };
+    this.help = { name, description, category, usage, utilisation };
   }
 }
 
