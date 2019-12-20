@@ -6,7 +6,8 @@ class Sanctions extends Command {
   constructor(client) {
     super(client, {
       name: "sanctions",
-      description: "+sanctions membre",
+      utilisation: "+sanctions membre",
+      description: "affiche les sanctions d'un membre.",
       usage: "sanctions",
       category: "Système",
       permLevel: "🔥"
