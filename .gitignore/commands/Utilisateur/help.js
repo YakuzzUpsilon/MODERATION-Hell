@@ -6,6 +6,7 @@ class Help extends Command {
   constructor(client) {
     super(client, {
       name: "help",
+      utilisation: "+help",
       description: "Afficher toutes les commandes disponibles.",
       usage: "help [commande]",
       aliases: ["h"]
