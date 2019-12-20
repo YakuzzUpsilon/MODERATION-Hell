@@ -6,7 +6,7 @@ class Tempban extends Command {
   constructor(client) {
     super(client, {
       name: "tempban",
-      description: "Tempban un utilisateur.",
+      description: "+tempban membre temps raison",
       usage: "tempban",
       category: "Système",
       permLevel: "🌟"
