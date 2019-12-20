@@ -8,7 +8,7 @@ const config = {
     flammeRole: "🔥",
     etoileRole: "🌟",
     diamantRole: "💎",
-    AdminRole: "🔑",
+    adminRole: "🔑",
     systemNotice: true
   },
   permLevels: [
