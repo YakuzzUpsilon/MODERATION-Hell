@@ -5,7 +5,8 @@ class Unwarn extends Command {
   constructor(client) {
     super(client, {
       name: "unwarn",
-      description: "+unwarn membre",
+      utilisation: "+unwarn membre",
+      description: "enleve le dernier warn d'un utilisateur.",
       usage: "unwarn",
       category: "Système",
       permLevel: "⚡"
