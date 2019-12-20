@@ -4,7 +4,8 @@ class Unmute extends Command {
   constructor(client) {
     super(client, {
       name: "unmute",
-      description: "+unmute membre",
+      utilisation: "+unmute membre",
+      description: "Unmute un utilisateur.",
       usage: "unmute",
       category: "Système",
       permLevel: "🦄┇Staff"
