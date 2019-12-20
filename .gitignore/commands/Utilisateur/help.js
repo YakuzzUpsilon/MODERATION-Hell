@@ -54,7 +54,7 @@ class Help extends Command {
           }
           output += `${settings.prefix}${c.help.name}${" ".repeat(
             longest - c.help.name.length
-          )} :: ${c.help.description}\n`;
+          )} :: ${c.help.utilisation}\n`;
         });
         message.channel.send(output, {
           code: "asciidoc",
@@ -68,8 +68,10 @@ class Help extends Command {
           message.channel.send(
             `= ${command.help.name} = \ndescription:: ${
               command.help.description
-            }\nutilisation:: ${
+            }\nnom:: ${
               command.help.usage
+            }\nutilisation:: ${
+              command.help.utilisation
             }\nalias:: ${command.conf.aliases.join(", ")}`,
             { code: "asciidoc" }
           );
