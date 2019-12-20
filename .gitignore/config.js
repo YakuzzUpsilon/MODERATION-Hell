@@ -1,7 +1,7 @@
 const config = {
   defaultSettings: {
     prefix: "+",
-    modLogChannel: "silent-logs",
+    modLogChannel: "📲・𝑳𝒐𝒈𝒔-𝑴𝒆𝒔𝒔𝒂𝒈𝒆𝒔",
     staffTestRole: "🚫┇Staff Test",
     staffRole: "🦄┇Staff",
     eclairRole: "⚡",
