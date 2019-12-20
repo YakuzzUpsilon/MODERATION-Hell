@@ -4,7 +4,8 @@ class Rainbow extends Command {
   constructor(client) {
     super(client, {
       name: "rainbow",
-      description: "+rainbow role",
+      utilisation: "+rainbow role",
+      description: "Le role change de couleur.",
       usage: "rainbow",
       category: "Système",
       permLevel: "🔑"
