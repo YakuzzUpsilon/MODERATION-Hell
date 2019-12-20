@@ -3,6 +3,7 @@ class Command {
     client,
     {
       name = null,
+      utilisation = "aucune syntaxe détéctée.",
       description = "Aucune description détéctée.",
       category = "Utilisateur",
       usage = "Aucune utilisation détéctée.",
