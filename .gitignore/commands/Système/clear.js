@@ -4,7 +4,7 @@ class Clear extends Command {
   constructor(client) {
     super(client, {
       name: "clear",
-      description: "Nettoyer un nombre de messages spécifiés.",
+      description: "+clear nombre(< 100)",
       usage: "clear",
       category: "Système",
       permLevel: "⚡"
