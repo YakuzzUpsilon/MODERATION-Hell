@@ -5,7 +5,8 @@ class Ban extends Command {
   constructor(client) {
     super(client, {
       name: "ban",
-      description: "+ban membre raison",
+      utilisation: "+ban membre raison",
+      description: "Ban un utilisateur.",
       usage: "ban",
       category: "Système",
       permLevel: "💎"
