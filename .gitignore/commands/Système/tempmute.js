@@ -6,7 +6,7 @@ class Tempmute extends Command {
   constructor(client) {
     super(client, {
       name: "tempmute",
-      description: "Tempmute un utilisateur.",
+      description: "+tempmute membre temps raison",
       usage: "tempmute",
       category: "Système",
       permLevel: "🚫┇Staff Test"
