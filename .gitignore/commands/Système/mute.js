@@ -5,7 +5,8 @@ class Mute extends Command {
   constructor(client) {
     super(client, {
       name: "mute",
-      description: "+mute membre raison",
+      utilisation: "+mute membre raison",
+      description: "Mute un utilisateur.",
       usage: "mute",
       category: "Système",
       permLevel: "⚡"
