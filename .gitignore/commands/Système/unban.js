@@ -4,7 +4,7 @@ class Unban extends Command {
   constructor(client) {
     super(client, {
       name: "unban",
-      description: "Unban un utilisateur.",
+      description: "+unban membre.id",
       usage: "unban",
       category: "Système",
       permLevel: "💎"
