@@ -5,7 +5,7 @@ class Warn extends Command {
   constructor(client) {
     super(client, {
       name: "warn",
-      description: "Warn un utilisateur.",
+      description: "+warn membre raison",
       usage: "warn",
       category: "Système",
       permLevel: "🚫┇Staff Test"
