@@ -1,6 +1,6 @@
 const config = {
   defaultSettings: {
-    prefix: "+",
+    prefix: "-",
     modLogChannel: "",
     staffTestRole: "🚫┇Staff Test",
     staffRole: "🦄┇Staff",
