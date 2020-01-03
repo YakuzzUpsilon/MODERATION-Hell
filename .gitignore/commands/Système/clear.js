@@ -8,7 +8,7 @@ class Clear extends Command {
       description: "Nettoyer un nombre de messages spécifiés.",
       usage: "clear",
       category: "Système",
-      permLevel: "⚡"
+      permLevel: "Co-Fondatrice"
     });
   }
 
