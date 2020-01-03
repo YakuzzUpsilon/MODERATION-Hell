@@ -143,7 +143,7 @@ const init = async () => {
 
 init();
 
-const activities = "𝔗𝔥𝔢 ℌ𝔢𝔩𝔩"
+const activities = "Respect les règles ou jte Ban"
 
 client.on('ready', () => {
         client.user.setActivity(activities);
