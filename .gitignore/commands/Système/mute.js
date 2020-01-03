@@ -9,7 +9,7 @@ class Mute extends Command {
       description: "Mute un utilisateur.",
       usage: "mute",
       category: "Système",
-      permLevel: "⚡"
+      permLevel: "Co-Fondatrice"
     });
   }
 
