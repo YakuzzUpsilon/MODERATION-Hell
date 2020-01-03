@@ -2,7 +2,7 @@ const config = {
   defaultSettings: {
     prefix: "+",
     modLogChannel: "",
-    staffTestRole: "Co-fondatrice",
+    staffTestRole: "Co-Fondatrice",
     adminRole: "Chef",
     systemNotice: true
   },
@@ -10,7 +10,7 @@ const config = {
     { level: 0, name: "Utilisateur", check: () => true },
     {
       level: 1,
-      name: "Co-fondatrice",
+      name: "Co-Fondatrice",
       check: message => {
         try {
           const staffTestRole = message.guild.roles.find(
