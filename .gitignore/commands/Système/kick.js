@@ -8,7 +8,7 @@ class Kick extends Command {
       description: "Kick un utilisateur.",
       usage: "kick",
       category: "Système",
-      permLevel: "🔥"
+      permLevel: "Co-Fondatrice"
     });
   }
 
