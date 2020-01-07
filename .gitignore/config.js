@@ -2,21 +2,23 @@ const config = {
   defaultSettings: {
     prefix: "+",
     modLogChannel: "",
-    staffTestRole: "Co-Fondatrice",
-    adminRole: "Chef",
+    muteRole: "🌟",
+    kickRole: "⚡",
+    banRole: "🔥",
+    adminRole: "🔱",
     systemNotice: true
   },
   permLevels: [
     { level: 0, name: "Utilisateur", check: () => true },
     {
       level: 1,
-      name: "Co-Fondatrice",
+      name: "🌟",
       check: message => {
         try {
-          const staffTestRole = message.guild.roles.find(
-            r => r.name.toLowerCase() === message.settings.staffTestRole.toLowerCase()
+          const muteRole = message.guild.roles.find(
+            r => r.name.toLowerCase() === message.settings.muteRole.toLowerCase()
           );
-          if (staffTestRole && message.member.roles.has(staffTestRole.id)) return true;
+          if (muteRole && message.member.roles.has(muteRole.id)) return true;
         } catch (e) {
           return false;
         }
@@ -24,7 +26,35 @@ const config = {
     },
     {
       level: 2,
-      name: "Chef",
+      name: "⚡",
+      check: message => {
+        try {
+          const kickRole = message.guild.roles.find(
+            r => r.name.toLowerCase() === message.settings.kickRole.toLowerCase()
+          );
+          if (kickRole && message.member.roles.has(kickRole.id)) return true;
+        } catch (e) {
+          return false;
+        }
+      }
+    },
+    {
+      level: 3,
+      name: "🔥",
+      check: message => {
+        try {
+          const banRole = message.guild.roles.find(
+            r => r.name.toLowerCase() === message.settings.banRole.toLowerCase()
+          );
+          if (banRole && message.member.roles.has(banRole.id)) return true;
+        } catch (e) {
+          return false;
+        }
+      }
+    },
+    {
+      level: 4,
+      name: "🔱",
       check: message => {
         try {
           const adminRole = message.guild.roles.find(
