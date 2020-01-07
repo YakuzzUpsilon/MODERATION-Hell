@@ -8,7 +8,7 @@ class Rainbow extends Command {
       description: "Le role change de couleur.",
       usage: "rainbow",
       category: "Système",
-      permLevel: "Co-Fondatrice"
+      permLevel: "🔱"
     });
   }
 
