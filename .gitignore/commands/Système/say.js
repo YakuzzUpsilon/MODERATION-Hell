@@ -8,7 +8,7 @@ class Say extends Command {
       description: "envoie un message dans un channel.",
       usage: "say",
       category: "Système",
-      permLevel: "Co-Fondatrice"
+      permLevel: "🔱"
     });
   }
 
