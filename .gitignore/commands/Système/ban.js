@@ -9,7 +9,7 @@ class Ban extends Command {
       description: "Ban un utilisateur.",
       usage: "ban",
       category: "Système",
-      permLevel: "🔥"
+      permLevel: "🔱"
     });
   }
 
