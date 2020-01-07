@@ -10,7 +10,7 @@ class Tempmute extends Command {
       description: "Tempmute un utilisateur.",
       usage: "tempmute",
       category: "Système",
-      permLevel: "Co-Fondatrice"
+      permLevel: "🌟"
     });
   }
 
