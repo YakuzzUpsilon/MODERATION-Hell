@@ -8,7 +8,7 @@ class Unmute extends Command {
       description: "Unmute un utilisateur.",
       usage: "unmute",
       category: "Système",
-      permLevel: "Co-Fondatrice"
+      permLevel: "🌟"
     });
   }
 
