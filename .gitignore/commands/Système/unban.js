@@ -8,7 +8,7 @@ class Unban extends Command {
       description: "Unban un utilisateur.",
       usage: "unban",
       category: "Système",
-      permLevel: "🔥"
+      permLevel: "🔱"
     });
   }
 
