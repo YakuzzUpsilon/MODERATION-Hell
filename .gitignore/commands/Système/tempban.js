@@ -10,7 +10,7 @@ class Tempban extends Command {
       description: "Tempban un utilisateur.",
       usage: "tempban",
       category: "Système",
-      permLevel: "Co-Fondatrice"
+      permLevel: "🔥"
     });
   }
 
