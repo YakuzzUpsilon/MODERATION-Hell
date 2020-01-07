@@ -9,7 +9,7 @@ class Warn extends Command {
       description: "Warn un utilisateur.",
       usage: "warn",
       category: "Système",
-      permLevel: "Co-Fondatrice
+      permLevel: "🌟
     });
   }
 
