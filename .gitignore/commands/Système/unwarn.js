@@ -9,7 +9,7 @@ class Unwarn extends Command {
       description: "enleve le dernier warn d'un utilisateur.",
       usage: "unwarn",
       category: "Système",
-      permLevel: "Co-Fondatrice"
+      permLevel: "🌟"
     });
   }
 
