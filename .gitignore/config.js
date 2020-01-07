@@ -5,7 +5,9 @@ const config = {
     muteRole: "🌟",
     kickRole: "⚡",
     banRole: "🔥",
-    adminRole: "🔱",
+    allRole: "🔱",
+    adminRole: "💎",
+    oneRole: "🥇",
     systemNotice: true
   },
   permLevels: [
@@ -53,8 +55,22 @@ const config = {
       }
     },
     {
-      level: 4,
+      level: 3,
       name: "🔱",
+      check: message => {
+        try {
+          const allRole = message.guild.roles.find(
+            r => r.name.toLowerCase() === message.settings.allRole.toLowerCase()
+          );
+          if (allRole && message.member.roles.has(allRole.id)) return true;
+        } catch (e) {
+          return false;
+        }
+      }
+    },
+    {
+      level: 5,
+      name: "💎",
       check: message => {
         try {
           const adminRole = message.guild.roles.find(
@@ -62,6 +78,20 @@ const config = {
               r.name.toLowerCase() === message.settings.adminRole.toLowerCase()
           );
           if (adminRole && message.member.roles.has(adminRole.id)) return true;
+        } catch (e) {
+          return false;
+        }
+      }
+    },
+        {
+      level: 6,
+      name: "🥇",
+      check: message => {
+        try {
+          const oneRole = message.guild.roles.find(
+            r => r.name.toLowerCase() === message.settings.oneRole.toLowerCase()
+          );
+          if (oneRole && message.member.roles.has(oneRole.id)) return true;
         } catch (e) {
           return false;
         }
