@@ -10,7 +10,7 @@ class Sanctions extends Command {
       description: "affiche les sanctions d'un membre.",
       usage: "sanctions",
       category: "Système",
-      permLevel: "⚡"
+      permLevel: "🔱"
     });
   }
 
