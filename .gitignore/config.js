@@ -55,7 +55,7 @@ const config = {
       }
     },
     {
-      level: 3,
+      level: 4,
       name: "🔱",
       check: message => {
         try {
