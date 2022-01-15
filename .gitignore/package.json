@@ -29,7 +29,7 @@
     "lib": "^4.0.5",
     "lowdb": "^1.0.0",
     "m3u8stream": "^0.6.3",
-    "marked": "^0.8.0",
+    "marked": "^4.0.10",
     "memorystore": "^1.6.1",
     "moment": "^2.24.0",
     "moment-duration-format": "^2.3.2",
